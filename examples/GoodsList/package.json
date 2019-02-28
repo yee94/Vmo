@@ -1,15 +1,16 @@
 {
-  "name": "vmo",
+  "name": "goodslist",
   "version": "1.0.0",
-  "description": "Frontend model",
+  "description": "",
   "main": "index.js",
   "scripts": {
+    "serve": "parcel index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "wyy.xb@qq.com",
+  "author": "xiaobe",
   "license": "ISC",
   "devDependencies": {
-    "axios": "^0.18.0",
-    "typescript": "^3.3.3333"
+    "babel-core": "^6.26.3",
+    "parcel-bundler": "^1.11.0"
   }
 }

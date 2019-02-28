@@ -7,6 +7,5 @@ import Vmo from "./Vmo";
 
 export default abstract class AxiosVmo extends Vmo {
   protected static driver: IAxiosDriver = AxiosDriver;
-
-  protected abstract builder(data: any): this;
+  protected static requestUrl: string;
 }
