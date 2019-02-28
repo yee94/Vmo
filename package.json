@@ -1,0 +1,14 @@
+{
+  "name": "vmo",
+  "version": "1.0.0",
+  "description": "Frontend model",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "wyy.xb@qq.com",
+  "license": "ISC",
+  "devDependencies": {
+    "axios": "^0.18.0"
+  }
+}
