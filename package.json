@@ -1,6 +1,5 @@
 {
-  "name": "@vmojs/core",
-  "version": "1.0.2",
+  "version": "1.0.1",
   "description": "Frontend model",
   "main": "bundle/index.js",
   "scripts": {
