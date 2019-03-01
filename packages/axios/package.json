@@ -1,6 +1,6 @@
 {
   "name": "@vmojs/axios",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "bundle/index.js",
   "scripts": {
@@ -14,8 +14,8 @@
   },
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.18.0",
-    "@vmojs/core": "^1.0.2"
+    "@vmojs/core": "^1.0.2",
+    "axios": "^0.18.0"
   },
   "gitHead": "da055f6bc6ff5e472f6c60002dfac359f4963564"
 }
