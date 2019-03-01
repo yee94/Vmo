@@ -1,6 +1,6 @@
 {
   "name": "@vmojs/axios",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "bundle/index.js",
   "scripts": {
@@ -14,6 +14,6 @@
     "axios": "^0.18.0"
   },
   "devDependencies": {
-    "@vmojs/core": "^1.0.0"
+    "@vmojs/core": "^1.0.1"
   }
 }
