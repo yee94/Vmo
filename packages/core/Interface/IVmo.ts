@@ -3,6 +3,6 @@
  **/
 import { IDriver } from "./IDriver";
 
-export interface IVmoConfig {
+export interface IVmo {
   driver: IDriver;
 }
