@@ -5,7 +5,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
 
 var axios = _interopDefault(require('axios'));
-var core = require('@vmojs/core');
+var base = require('@vmojs/base');
 
 // @ts-ignore
 const AxiosDriver = {
@@ -16,7 +16,7 @@ const AxiosDriver = {
 /**
  * Created by yee.wang on 2019-02-28
  **/
-class AxiosVmo extends core.Vmo {
+class AxiosVmo extends base.Vmo {
     /**
      * 获取模型集合
      * @param options

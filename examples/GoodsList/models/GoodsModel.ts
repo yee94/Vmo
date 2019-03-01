@@ -1,11 +1,12 @@
 /**
  * Created by yee.wang on 2019-02-28
  **/
-import { AxiosVmo, Field, mapValue } from "../../../bundle";
 import { USER_URL } from "../constants/Urls";
 import { wait } from "../utils";
 import { goods_data } from "../mock";
 import FilterModel from "./FilterModel";
+import { Field, mapValue } from "@vmojs/base";
+import { AxiosVmo } from "@vmojs/axios";
 
 // 商品查询参数
 interface IGoodsQuery {

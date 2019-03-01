@@ -4,7 +4,8 @@
 import { MENU_URL } from "../constants/Urls";
 import { menu_data } from "../mock";
 import { wait } from "../utils";
-import { AxiosVmo, Field, mapValue } from "../../../bundle";
+import { AxiosVmo } from "@vmojs/axios";
+import { Field, mapValue } from "@vmojs/base";
 
 export default class MenuModel extends AxiosVmo {
   protected static requestUrl: string = MENU_URL;
