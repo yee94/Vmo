@@ -1,0 +1,21 @@
+{
+  "name": "@vmojs/axios",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bundle/index.js",
+  "scripts": {
+    "build": "rollup -c ../../rollup.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "wyy.xb@qq.com",
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@vmojs/base": "^1.0.0",
+    "axios": "^0.18.0"
+  },
+  "gitHead": "da055f6bc6ff5e472f6c60002dfac359f4963564"
+}

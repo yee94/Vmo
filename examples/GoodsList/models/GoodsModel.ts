@@ -1,9 +1,9 @@
 /**
  * Created by yee.wang on 2019-02-28
  **/
-import AxiosVmo from "../../../src/Core/AxiosVmo";
+import { AxiosVmo, Field, mapValue } from "../../../bundle";
 import { USER_URL } from "../constants/Urls";
-import { Field, mapValue, wait } from "../utils";
+import { wait } from "../utils";
 import { goods_data } from "../mock";
 import FilterModel from "./FilterModel";
 
@@ -26,15 +26,15 @@ export default class GoodsModel extends AxiosVmo {
   @Field
   public id: number;
   @Field
-  catId: number;
+  public catId: number;
   @Field
-  aliasName: string;
+  public aliasName: string;
   @Field
-  uid: number;
+  public uid: number;
   @Field
-  userId: number;
+  public userId: number;
   @Field
-  size: { x: number; y: number };
+  public size: { x: number; y: number };
 
   /**
    * 返回Goods 集合

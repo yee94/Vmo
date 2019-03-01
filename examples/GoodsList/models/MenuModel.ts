@@ -1,10 +1,10 @@
 /**
  * Created by yee.wang on 2019-02-28
  **/
-import AxiosVmo from "../../../src/Core/AxiosVmo";
 import { MENU_URL } from "../constants/Urls";
 import { menu_data } from "../mock";
-import { Field, mapValue, wait } from "../utils";
+import { wait } from "../utils";
+import { AxiosVmo, Field, mapValue } from "../../../bundle";
 
 export default class MenuModel extends AxiosVmo {
   protected static requestUrl: string = MENU_URL;
