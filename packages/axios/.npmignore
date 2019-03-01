@@ -1,0 +1,9 @@
+node_modules/
+examples/
+.idea/
+.cache/
+dist/
+.rpt2_cache/
+
+*.lock
+*.log
