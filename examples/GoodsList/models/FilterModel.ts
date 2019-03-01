@@ -1,7 +1,8 @@
+import { Field, Vmo } from "@vmojs/base";
+
 /**
  * Created by yee.wang on 2019-02-28
  **/
-import { Field, Vmo } from "../../../bundle";
 
 interface IFilterValue {
   name: string;

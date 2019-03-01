@@ -2,7 +2,7 @@
  * Created by yee.wang on 2019-02-28
  **/
 import { IAxiosDriver } from "../Driver/AxiosDriver";
-import { Vmo } from "@vmojs/core";
+import { Vmo } from "@vmojs/base";
 export declare abstract class AxiosVmo extends Vmo {
     protected static driver: IAxiosDriver;
     protected static requestUrl: string;

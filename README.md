@@ -24,7 +24,7 @@ Vmo 主要用于处理数据请求，数据模型管理。可配合当前主流�
 Vmo 只提供一个基类，提倡的主要是对数据模型的封装设计。你可以像以下方式封装数据模型
 
 ```typescript
-import Vmo, { Field } from "Vmo";
+import { Vmo, Field } from "@vmojs/base";
 
 interface IFilterValue {
   name: string;
@@ -54,7 +54,8 @@ export default class FilterModel extends Vmo {
 `AxiosVmo` 是基于 `Vmo` 实现的一个使用`Axios`作为 数据获取、存储的 `Driver` ，你同样可以封装自己的`Driver` ，通过相同接口，实现多态方法，来做到在不同介质上存储和获取数据。比如`IndexDB`,`LocalStorage`。
 
 ```typescript
-import { AxiosVmo, Field, mapValue } from "Vmo";
+import { AxiosVmo } from "@vmojs/axios";
+import { Field, mapValue } from "@vmojs/base";
 import { USER_URL } from "../constants/Urls";
 import FilterModel from "./FilterModel";
 
@@ -133,7 +134,7 @@ export default class GoodsModel extends AxiosVmo {
 同样的`Vmo`还可以配合 `Mobx`使用，真正完成数据模型与数据响应结合使用。
 
 ```typescript
-import Vmo, { Field } from "Vmo";
+import { Vmo, Field } from "@vmojs/base";
 import { observable } from "mobx";
 
 interface IFilterValue {
