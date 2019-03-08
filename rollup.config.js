@@ -11,5 +11,5 @@ export default {
     file: "bundle/index.js",
     format: "cjs"
   },
-  plugins: [typescript(), babel()]
+  plugins: [typescript(), babel({extensions: ['.js', '.ts']})]
 };
