@@ -4,6 +4,7 @@
   "main": "bundle/index.js",
   "scripts": {
     "build": "lerna run build",
+    "bootstrap": "lerna bootstrap",
     "publish": "lerna publish",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
