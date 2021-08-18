@@ -3,6 +3,8 @@
 Object.defineProperty(exports, '__esModule', { value: true });
 
 function _typeof(obj) {
+  "@babel/helpers - typeof";
+
   if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
     _typeof = function (obj) {
       return typeof obj;
@@ -41,16 +43,22 @@ function _createClass(Constructor, protoProps, staticProps) {
 /**
  * Created by yee.wang on 2019-02-28
  **/
-var Vmo =
-/*#__PURE__*/
-function () {
+var Vmo = /*#__PURE__*/function () {
+  function Vmo(data) {
+    _classCallCheck(this, Vmo);
+
+    if (data !== undefined) {
+      this.load(data);
+    }
+  }
+  /**
+   * 用于转换数据到Model
+   * @param data
+   */
+
+
   _createClass(Vmo, [{
     key: "load",
-
-    /**
-     * 用于转换数据到Model
-     * @param data
-     */
     value: function load(data) {
       var _this = this;
 
@@ -61,17 +69,7 @@ function () {
       });
       return this;
     }
-  }]);
-
-  function Vmo(data) {
-    _classCallCheck(this, Vmo);
-
-    if (data !== undefined) {
-      this.load(data);
-    }
-  }
-
-  _createClass(Vmo, [{
+  }, {
     key: "toJs",
     value: function toJs() {
       var _this2 = this;
@@ -111,6 +109,6 @@ function Field(target, name) {
   return descr;
 }
 
+exports.Field = Field;
 exports.Vmo = Vmo;
 exports.mapValue = mapValue;
-exports.Field = Field;
