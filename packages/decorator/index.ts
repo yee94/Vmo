@@ -4,9 +4,8 @@ const META_FIELD = Symbol("VMO_META_FIELD");
 
 export const Vmo = constructDecorator(
   ({ targetType, target, ctor, propName, args }) => {
-    if (targetType === CLASS) {
-      const metaFields = Array.from(ctor[META_FIELD]?.entries() || []);
-
+    if (targetType === CLASS && ctor[META_FIELD]) {
+      const metaFields = Array.from(ctor[META_FIELD].entries() || []);
       return class extends target {
         constructor(...args) {
           super(...args);
