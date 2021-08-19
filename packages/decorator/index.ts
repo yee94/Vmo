@@ -20,7 +20,7 @@ export const Vmo = constructDecorator(
             }
           });
 
-          this.load?.();
+          this.load && this.load();
         }
       };
     }
