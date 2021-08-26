@@ -14,11 +14,25 @@ export class PageParams {
 
   @Vmo()
   type?: string;
-  @Vmo()
+
+  // subType2 => subType
+  @Vmo("subType2")
   subType?: string;
-  @Vmo()
-  queryId?: string;
+
+  @Vmo(({ type, subType }) => `${type}_${subType}`)
+  finalType?: string;
 }
 
-new PageParams({ type: "Type1" });
+new PageParams({ type: "Type1", subType2: "SubType" });
+
+/**
+ * =>
+ * 
+ * {
+ *    type: "Type1",
+ *    subType: "SubType",
+ *    finalType: "Type1_SubType"
+ * }
+ * 
+ * */
 ```
