@@ -1,6 +1,6 @@
 {
   "name": "@vmojs/decorator",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "",
   "main": "bundle/index.js",
   "scripts": {
@@ -14,6 +14,7 @@
   "author": "wyy.xb@qq.com",
   "license": "ISC",
   "dependencies": {
-    "@qiwi/decorator-utils": "~3.2.7"
+    "@qiwi/decorator-utils": "~3.2.7",
+    "lodash": "^4.17.21"
   }
 }

@@ -1,4 +1,5 @@
 import { constructDecorator, CLASS, FIELD } from "@qiwi/decorator-utils";
+import get from "lodash/get";
 
 const META_FIELD = Symbol("VMO_META_FIELD");
 
@@ -12,9 +13,11 @@ export const Vmo = constructDecorator(
           const [data = {}] = args;
           metaFields.map(([inputName, propName]) => {
             if (typeof inputName === "function") {
-              this[propName] = inputName(data, { target, ctor });
-            } else if (typeof inputName === "string" && inputName in data) {
-              this[propName] = data[inputName];
+              try {
+                this[propName] = inputName(data, { target, ctor });
+              } catch (e) { }
+            } else if (typeof inputName === "string") {
+              this[propName] = get(data, inputName);
             }
           });
           this.load?.();
