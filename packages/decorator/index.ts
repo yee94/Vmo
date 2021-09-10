@@ -6,12 +6,10 @@ export const Vmo = constructDecorator(
   ({ targetType, target, ctor, propName, args }) => {
     if (targetType === CLASS) {
       const metaFields = Array.from(ctor[META_FIELD]?.entries() || []);
-      return class extends target {
+      return class Vmo extends target {
         constructor(...args) {
           super(...args);
-
           const [data = {}] = args;
-
           metaFields.map(([inputName, propName]) => {
             if (typeof inputName === "function") {
               this[propName] = inputName(data, { target, ctor });
@@ -19,7 +17,6 @@ export const Vmo = constructDecorator(
               this[propName] = data[inputName];
             }
           });
-
           this.load?.();
         }
       };
