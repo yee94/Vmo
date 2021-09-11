@@ -15,7 +15,9 @@ export const Vmo = constructDecorator(
             if (typeof inputName === "function") {
               try {
                 this[propName] = inputName(data, { target, ctor });
-              } catch (e) { }
+              } catch (e) {
+                console.error(e);
+              }
             } else if (typeof inputName === "string") {
               this[propName] = get(data, inputName);
             }
