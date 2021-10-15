@@ -9,7 +9,7 @@ export default {
   external: ["axios", "@vmojs/*"],
   output: {
     file: "bundle/index.js",
-    // format: "esm"
+    format: "cjs",
   },
   plugins: [typescript(), babel({ extensions: [".js", ".ts"] })],
 };
