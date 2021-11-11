@@ -14,7 +14,11 @@ export const Vmo = constructDecorator(
           metaFields.map(([inputName, propName]) => {
             if (typeof inputName === "function") {
               try {
-                this[propName] = inputName(data, { target, ctor });
+                this[propName] = inputName.call(this, data, {
+                  instance: this,
+                  target,
+                  ctor,
+                });
               } catch (e) {
                 console.error(e);
               }
