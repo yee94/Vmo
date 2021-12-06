@@ -11,7 +11,7 @@ export const Vmo = constructDecorator(
         constructor(...args) {
           super(...args);
           const [data = {}] = args;
-          metaFields.map(([inputName, propName]) => {
+          metaFields.map(([propName, inputName]) => {
             if (typeof inputName === "function") {
               try {
                 this[propName] = inputName.call(this, data, {
@@ -37,7 +37,7 @@ export const Vmo = constructDecorator(
 
       const [fieldName = propName] = args;
 
-      ctor[META_FIELD].set(fieldName, propName);
+      ctor[META_FIELD].set(propName, fieldName);
     }
 
     return target;
