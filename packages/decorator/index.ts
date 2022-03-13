@@ -1,4 +1,4 @@
-import { constructDecorator, CLASS, FIELD } from "@qiwi/decorator-utils";
+import { constructDecorator, CLASS, FIELD } from "./utils";
 import get from "lodash/get";
 
 const META_FIELD = Symbol("VMO_META_FIELD");
