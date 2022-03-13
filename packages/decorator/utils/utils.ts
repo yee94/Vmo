@@ -1,7 +1,7 @@
 import get from "lodash/get";
-import isFunction from "lodash/isfunction";
-import isUndefined from "lodash/isundefined";
-import mapValues from "lodash/mapvalues";
+import isFunction from "lodash/isFunction";
+import isUndefined from "lodash/isUndefined";
+import mapValues from "lodash/mapValues";
 import reduce from "lodash/reduce";
 import set from "lodash/set";
 
