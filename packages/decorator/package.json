@@ -1,6 +1,6 @@
 {
   "name": "@vmojs/decorator",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Vmo is a data model for the front end. A micro-framework that solves the confusion of front-end interface access, inconsistent data request methods on the server side, and inconsistent data return results.",
   "main": "./dist/esm/index.js",
   "exports": {
