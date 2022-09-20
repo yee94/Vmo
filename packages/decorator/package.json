@@ -1,11 +1,22 @@
 {
   "name": "@vmojs/decorator",
-  "version": "2.0.1",
+  "version": "2.0.0",
   "description": "Vmo is a data model for the front end. A micro-framework that solves the confusion of front-end interface access, inconsistent data request methods on the server side, and inconsistent data return results.",
-  "main": "bundle/index.js",
+  "main": "./dist/esm/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "types": "./lib/index.d.ts",
   "scripts": {
     "dev": "father dev",
-    "build": "father build"
+    "build": "father build",
+    "test": "vitest run",
+    "prettier": "pretty-quick --staged",
+    "prepublishOnly": "npm run test && npm run build"
   },
   "files": [
     "dist"
