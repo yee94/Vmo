@@ -5,6 +5,7 @@ importers:
   .:
     specifiers:
       '@types/enzyme': ^3.10.12
+      bumpp: ^8.2.1
       father: ^4.0.5
       pre-commit: ^1.2.2
       prettier: ^2.7.1
@@ -12,6 +13,7 @@ importers:
       vitest: ^0.23.4
     devDependencies:
       '@types/enzyme': 3.10.12
+      bumpp: 8.2.1
       father: 4.0.5
       pre-commit: 1.2.2
       prettier: 2.7.1
@@ -408,6 +410,16 @@ packages:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.0
       '@jridgewell/sourcemap-codec': 1.4.14
+    dev: true
+
+  /@jsdevtools/ez-spawn/3.0.4:
+    resolution: {integrity: sha1-VkHrJv7m0x7Cn2eI66hJRwxSx/8=, tarball: '@jsdevtools/ez-spawn/download/@jsdevtools/ez-spawn-3.0.4.tgz'}
+    engines: {node: '>=10'}
+    dependencies:
+      call-me-maybe: 1.0.1
+      cross-spawn: 7.0.3
+      string-argv: 0.3.1
+      type-detect: 4.0.8
     dev: true
 
   /@microsoft/api-extractor-model/7.23.3:
@@ -1229,11 +1241,33 @@ packages:
     resolution: {integrity: sha1-hZgoeOIbmOHGZCXgPQF0eI9Wnug=, tarball: builtin-status-codes/download/builtin-status-codes-3.0.0.tgz}
     dev: true
 
+  /bumpp/8.2.1:
+    resolution: {integrity: sha512-4tHKsWC2mqHQvdjZ4AXgVhS2xMsz8qQ4zYt87vGRXW5tqAjrYa/UJqy7s/dGYI2OIe9ghBdiFhKpyKEX9SXffg==, tarball: bumpp/download/bumpp-8.2.1.tgz}
+    engines: {node: '>=10'}
+    hasBin: true
+    dependencies:
+      '@jsdevtools/ez-spawn': 3.0.4
+      cac: 6.7.14
+      fast-glob: 3.2.12
+      kleur: 4.1.5
+      prompts: 2.4.2
+      semver: 7.3.7
+    dev: true
+
+  /cac/6.7.14:
+    resolution: {integrity: sha512-b6Ilus+c3RrdDk+JhLKUAQfzzgLEPy6wcXqS7f/xe1EETvsDP6GORG7SFuOs6cID5YkqchW/LXZbX5bc8j7ZcQ==, tarball: cac/download/cac-6.7.14.tgz}
+    engines: {node: '>=8'}
+    dev: true
+
   /call-bind/1.0.2:
     resolution: {integrity: sha1-sdTonmiBGcPJqQOtMKuy9qkZvjw=, tarball: call-bind/download/call-bind-1.0.2.tgz}
     dependencies:
       function-bind: 1.1.1
       get-intrinsic: 1.1.3
+    dev: true
+
+  /call-me-maybe/1.0.1:
+    resolution: {integrity: sha1-JtII6onje1y95gJQoV8DHBak1ms=, tarball: call-me-maybe/download/call-me-maybe-1.0.1.tgz}
     dev: true
 
   /callsites/3.1.0:
@@ -2921,6 +2955,16 @@ packages:
       graceful-fs: 4.2.10
     dev: true
 
+  /kleur/3.0.3:
+    resolution: {integrity: sha1-p5yezIbuHOP6YgbRIWxQHxR/wH4=, tarball: kleur/download/kleur-3.0.3.tgz}
+    engines: {node: '>=6'}
+    dev: true
+
+  /kleur/4.1.5:
+    resolution: {integrity: sha512-o+NO+8WrRiQEE4/7nwRJhN1HWpVmJm511pBHUxPLtp0BUISzlBplORYSmTclCnJvQq2tKu/sgl3xVpkc7ZWuQQ==, tarball: kleur/download/kleur-4.1.5.tgz}
+    engines: {node: '>=6'}
+    dev: true
+
   /lines-and-columns/1.2.4:
     resolution: {integrity: sha1-7KKE910pZQeTCdwK2SVauy68FjI=, tarball: lines-and-columns/download/lines-and-columns-1.2.4.tgz}
     dev: true
@@ -3815,6 +3859,14 @@ packages:
     engines: {node: '>= 0.6.0'}
     dev: true
 
+  /prompts/2.4.2:
+    resolution: {integrity: sha1-e1fnOzpIAprRDr1E90sBcipMsGk=, tarball: prompts/download/prompts-2.4.2.tgz}
+    engines: {node: '>= 6'}
+    dependencies:
+      kleur: 3.0.3
+      sisteransi: 1.0.5
+    dev: true
+
   /pseudomap/1.0.2:
     resolution: {integrity: sha1-8FKijacOYYkX7wqKw0wa5aaChrM=, tarball: pseudomap/download/pseudomap-1.0.2.tgz}
     dev: true
@@ -4109,6 +4161,10 @@ packages:
 
   /signal-exit/3.0.7:
     resolution: {integrity: sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ==, tarball: signal-exit/download/signal-exit-3.0.7.tgz}
+    dev: true
+
+  /sisteransi/1.0.5:
+    resolution: {integrity: sha1-E01oEpd1ZDfMBcoBNw06elcQde0=, tarball: sisteransi/download/sisteransi-1.0.5.tgz}
     dev: true
 
   /sonic-boom/2.8.0:
