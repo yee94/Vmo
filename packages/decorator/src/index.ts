@@ -6,16 +6,16 @@ const META_FIELD = Symbol("VMO_META_FIELD");
 export const Vmo = constructDecorator(
   ({ targetType, target, ctor, propName, args }) => {
     if (targetType === CLASS) {
-      const metaFields = Array.from(ctor[META_FIELD]?.entries() || []);
-      return class Vmo extends target {
-        constructor(...args) {
-          super(...args);
-          const [data = {}] = args;
+      return new Proxy(target, {
+        construct(target, argArray, newTarget) {
+          const instance = Reflect.construct(target, argArray, newTarget);
+          const metaFields: any = Array.from(ctor[META_FIELD]?.entries() || []);
+          const data = argArray[0] || {};
           metaFields.map(([propName, inputName]) => {
             if (typeof inputName === "function") {
               try {
-                this[propName] = inputName.call(this, data, {
-                  instance: this,
+                instance[propName] = inputName.call(instance, data, {
+                  instance: instance,
                   target,
                   ctor,
                 });
@@ -23,13 +23,16 @@ export const Vmo = constructDecorator(
                 console.error(e);
               }
             } else if (typeof inputName === "string") {
-              this[propName] = get(data, inputName);
+              instance[propName] = get(data, inputName);
             }
           });
-          this.load?.();
-        }
-      };
+          instance.load?.();
+
+          return instance;
+        },
+      });
     }
+
     if (targetType === FIELD) {
       if (!ctor[META_FIELD]) {
         ctor[META_FIELD] = new Map();

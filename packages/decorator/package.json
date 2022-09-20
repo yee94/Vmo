@@ -1,17 +1,14 @@
 {
   "name": "@vmojs/decorator",
-  "version": "1.0.17",
-  "description": "",
+  "version": "2.0.0",
+  "description": "Vmo is a data model for the front end. A micro-framework that solves the confusion of front-end interface access, inconsistent data request methods on the server side, and inconsistent data return results.",
   "main": "bundle/index.js",
   "scripts": {
-    "build": "rollup -c ../../rollup.config.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "publishConfig": {
-    "access": "public"
+    "dev": "father dev",
+    "build": "father build"
   },
   "files": [
-    "bundle"
+    "dist"
   ],
   "keywords": [],
   "author": "wyy.xb@qq.com",
