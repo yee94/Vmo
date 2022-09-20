@@ -1,5 +1,5 @@
 {
-  "version": "1.0.3",
+  "version": "2.0.0",
   "description": "Frontend model",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
@@ -8,6 +8,7 @@
     "prettier": "pretty-quick --staged",
     "build": "pnpm -r --filter='./packages/*' run build",
     "play": "pnpm -C playground run dev",
+    "release": "bumpp package.json packages/**/package.json",
     "prepublishOnly": "npm run test && npm run build"
   },
   "pre-commit": [
@@ -18,6 +19,7 @@
   "license": "ISC",
   "devDependencies": {
     "@types/enzyme": "^3.10.12",
+    "bumpp": "^8.2.1",
     "father": "^4.0.5",
     "pre-commit": "^1.2.2",
     "prettier": "^2.7.1",
