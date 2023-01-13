@@ -18,7 +18,7 @@ export class PageParams {
 test("decorator", (t) => {
   const instance = new PageParams({ type: "Type1", subType2: "SubType" });
   expect(instance).toMatchInlineSnapshot(`
-      PageParams {
+      Vmo {
         "finalType": "Type1_SubType",
         "subType": "SubType",
         "type": "Type1",
