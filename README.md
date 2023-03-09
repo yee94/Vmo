@@ -3,23 +3,25 @@
 [![Using TypeScript](https://img.shields.io/badge/%3C/%3E-TypeScript-0072C4.svg)](https://www.typescriptlang.org/)
 [![MIT License](https://img.shields.io/npm/l/generator-bxd-oss.svg)](#License)
 
-# 简介
+English | [简体中文](./README_CN.md)
 
-Vmo 是一个用于前端的数据模型。解决前端接口访问混乱，服务端数据请求方式不统一，数据返回结果不一致的微型框架。
+# Introduction
 
-Vmo 主要用于处理数据请求，数据模型管理。可配合当前主流前端框架进行数据模型管理 Vue,React,Angular。
+Vmo is a data model framework for front-end applications. It solves the problem of confusing interface access, inconsistent server data request methods, and inconsistent data return results in front-end development.
 
-能够有效处理以下问题：
+Vmo is primarily used for data request handling and data model management. It can be used with popular front-end frameworks such as Vue, React, and Angular for data model management.
 
-- 接口请求混乱，`axios.get...`随处可见。
-- 数据管理混乱，请求到的数据结果用完即丢、拿到的数据直接放进`Store`。
-- 数据可靠性弱，不能保证请求数据是否稳定，字段是否多、是否少。
-- `Action`方法混乱，`Action`中及存在同步对`Store`的修改，又存在异步请求修改`Store`。
-- 代码提示弱，请求到的数据无法使用`TypeScript`进行代码提示，只能定义 `any` 类型。
-- 无效字段增多，人员变动，字段含义信息逐步丢失，新业务定义新字段。
-- 项目迁移繁重，项目重构时，对字段不理解，重构过程功能点、数据丢失。
+It can effectively address the following issues:
 
-# 使用
+- Confusing interface requests with axios.get... everywhere.
+- Chaotic data management, where requested data is used and then discarded, or placed directly into the Store.
+- Weak data reliability, where requested data cannot be guaranteed to be stable, and where fields may be missing or added.
+- Confusing Action methods, where there are synchronous and asynchronous modifications to the Store.
+- Weak code hinting, where requested data cannot be used for code hinting with TypeScript, and only "any" type can be defined.
+- Increasing number of invalid fields, where as personnel changes, the meaning of fields gradually disappears, and new business defines new fields.
+- Heavy project migration, where during project reconstruction, fields may not be understood, and functional points and data may be lost.
+
+# Usage
 
 ```tsx
 import { Vmo } from "@vmojs/decorator";
